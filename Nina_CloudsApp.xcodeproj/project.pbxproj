@@ -12,6 +12,8 @@
 		386471CD1F25B24400751EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386471CB1F25B24400751EC4 /* Main.storyboard */; };
 		386471CF1F25B24400751EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386471CE1F25B24400751EC4 /* Assets.xcassets */; };
 		386471D21F25B24400751EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386471D01F25B24400751EC4 /* LaunchScreen.storyboard */; };
+		386471F21F25BB8A00751EC4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386471E51F25B5E000751EC4 /* Alamofire.framework */; };
+		386471F31F25BB8A00751EC4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 386471E51F25B5E000751EC4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +66,28 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
+		386471F41F25BB8A00751EC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 386471D91F25B5E000751EC4 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		386471F61F25BB8A00751EC4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				386471F31F25BB8A00751EC4 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		386471C41F25B24400751EC4 /* Nina_CloudsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nina_CloudsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386471F21F25BB8A00751EC4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,10 +166,12 @@
 				386471C01F25B24400751EC4 /* Sources */,
 				386471C11F25B24400751EC4 /* Frameworks */,
 				386471C21F25B24400751EC4 /* Resources */,
+				386471F61F25BB8A00751EC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				386471F51F25BB8A00751EC4 /* PBXTargetDependency */,
 			);
 			name = Nina_CloudsApp;
 			productName = Nina_CloudsApp;
@@ -164,6 +190,7 @@
 				TargetAttributes = {
 					386471C31F25B24400751EC4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = M82C45XBZC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -268,6 +295,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		386471F51F25BB8A00751EC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 386471F41F25BB8A00751EC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		386471CB1F25B24400751EC4 /* Main.storyboard */ = {
@@ -387,7 +422,9 @@
 		386471D71F25B24400751EC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M82C45XBZC;
 				INFOPLIST_FILE = Nina_CloudsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smilec.tw.Nina-CloudsApp";
@@ -399,7 +436,9 @@
 		386471D81F25B24400751EC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M82C45XBZC;
 				INFOPLIST_FILE = Nina_CloudsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smilec.tw.Nina-CloudsApp";
