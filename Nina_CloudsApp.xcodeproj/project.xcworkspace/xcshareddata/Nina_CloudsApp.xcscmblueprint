@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C79F6A12989152A0A15B47E3965CAD293F0B9D6B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C79F6A12989152A0A15B47E3965CAD293F0B9D6B" : 9223372036854775807,
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "35E1B9EF-9BA7-40FB-9846-7294FC1F9092",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C79F6A12989152A0A15B47E3965CAD293F0B9D6B" : "Nina_CloudsApp\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "Nina_CloudsApp\/Alamofire\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Nina_CloudsApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Nina_CloudsApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NinaHuang0920\/Nina_CloudsApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C79F6A12989152A0A15B47E3965CAD293F0B9D6B"
+    }
+  ]
+}
