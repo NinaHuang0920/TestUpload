@@ -6,9 +6,54 @@ import Alamofire
 class ViewController: UIViewController
 {
 
-    override func viewDidLoad(){
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //解出JSON來源：https://api.github.com/users/octocat/repos
+        Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON { response in
+            //更符合內容的命名變數名稱為result_value
+            if let result_value = response.result.value
+            {
+                if let array = result_value as? [Any] //將result_value解讀為任何型態的陣列
+                {
+                //    if let JSON_OBJECT = array.first  //將陣列的第1個JSON物件做解析
+                    for JSON_OBJECT in array
+                    {
+                        if let dictionar = JSON_OBJECT as? [String: Any]//將JSON物件轉成key-value陣列
+                        {
+                            if let value = dictionar["id"] as? Int
+                            {
+                                print("id: \(value)")
+                            }
+                            if let value = dictionar["name"] as? String
+                            {
+                                print("name: \(value)")
+                            }
+                            if let value = dictionar["private"] as? Bool
+                            {
+                                print("private: \(value)")
+                            }
+                            
+                            if let value = dictionar["homepage"] as? String
+                            {
+                                print("homepage: \(value)")
+                            }
+                            else
+                            {
+                                print("homepage: null") //不知道原始格式之下的處理
+                            }
+
+                        
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+      
+        /*
+        //解出JSON來源：https://httpbin.org/get
         Alamofire.request("https://httpbin.org/get").responseJSON{response in
 //            print(response.request as Any)
 //            print(response.response as Any)
@@ -19,9 +64,6 @@ class ViewController: UIViewController
 //                print("準備印出result中的資料")
 //                print(ARRAY)
 //            }
-            
-            //解出JSON來源：https://httpbin.org/get
-            
             if let JSON = response.result.value
             {
                 if let dictionary = JSON as? [String:Any]
@@ -56,7 +98,7 @@ class ViewController: UIViewController
 
                 }
             }
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
